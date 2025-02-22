@@ -11,7 +11,7 @@ git clone https://github.com/yhl452493373/luci-app-frpc.git package/luci-app-frp
 #修改homeproxy
 rm -rf  feeds/luci/applications/luci-app-homeproxy
 #git clone https://github.com/bulianglin/homeproxy package/homeproxy
-git clone https://github.com/muink/luci-app-homeproxy package/homeproxy
+#git clone https://github.com/muink/luci-app-homeproxy package/homeproxy
 git clone -b dev/main https://github.com/muink/homeproxy.git package/homrproxy  #使用dev/main分支
 #git clone -b dev #https://github.com/immortalwrt/homeproxy.git package/homrproxy  #使用immortalwrt/dev分支
 
