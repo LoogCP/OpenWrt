@@ -12,12 +12,12 @@ git clone https://github.com/yhl452493373/luci-app-frpc.git package/luci-app-frp
 rm -rf  feeds/luci/applications/luci-app-homeproxy
 #git clone https://github.com/bulianglin/homeproxy package/homeproxy
 #git clone https://github.com/muink/luci-app-homeproxy package/homeproxy
-git clone -b dev/main #https://github.com/muink/homeproxy.git package/homrproxy  #使用dev/main分支
+#git clone -b dev/main https://github.com/muink/homeproxy.git package/homrproxy  #使用dev/main分支
 git clone -b dev https://github.com/immortalwrt/homeproxy.git package/homrproxy  #使用immortalwrt/dev分支
 
 # 添加额外插件
 ##nikki
-echo "src-git nikki https://github.com/nikkinikki-org/OpenWrt-nikki.git;main" >> "feeds.conf.default"
+#echo "src-git nikki https://github.com/nikkinikki-org/OpenWrt-nikki.git;main" >> "feeds.conf.default"
 
 #git clone --depth=1 https://github.com/kongfl888/luci-app-adguardhome package/luci-app-adguardhome
 #添加dae支持
