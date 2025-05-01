@@ -22,7 +22,7 @@ git clone -b dev https://github.com/immortalwrt/homeproxy.git package/homrproxy 
 #git clone --depth=1 https://github.com/kongfl888/luci-app-adguardhome package/luci-app-adguardhome
 #添加dae支持
 #git clone https://github.com/QiuSimons/luci-app-daed package/dae
-#mkdir -p Package/libcron && wget -O Package/libcron/Makefile https://raw.githubusercontent.com/immortalwrt/packages/refs/heads/master/libs/libcron/Makefile
+mkdir -p Package/libcron && wget -O Package/libcron/Makefile https://raw.githubusercontent.com/immortalwrt/packages/refs/heads/master/libs/libcron/Makefile
 
 # Themes
 git clone --depth=1 -b master https://github.com/kiddin9/luci-theme-edge package/luci-theme-edge
