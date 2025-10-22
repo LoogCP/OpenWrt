@@ -15,6 +15,8 @@ rm -rf  feeds/luci/applications/luci-app-homeproxy
 #git clone -b dev/main https://github.com/muink/homeproxy.git package/homrproxy  #使用dev/main分支
 git clone -b dev https://github.com/immortalwrt/homeproxy.git package/homrproxy  #使用immortalwrt/dev分支
 
+#添加 OpenAppFliter
+git clone https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter
 # 添加额外插件
 ##nikki
 #echo "src-git nikki https://github.com/nikkinikki-org/OpenWrt-nikki.git;main" >> "feeds.conf.default"
