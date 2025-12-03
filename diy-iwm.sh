@@ -5,6 +5,10 @@ sed -i 's/192.168.1.1/10.10.1.1/g' package/base-files/files/bin/config_generate
 # 更改默认 Shell 为 fish
 sed -i 's/\/bin\/ash/\/usr\/bin\/fish/g' package/base-files/files/etc/passwd
 
+#添加Nikki
+echo "src-git nikki https://github.com/nikkinikki-org/OpenWrt-nikki.git;main" >> "feeds.conf.default"
+./scripts/feeds update -a
+
 # 修改frpc
 #rm -rf feeds/luci/applications/luci-app-frpc
 #git clone https://github.com/yhl452493373/luci-app-frpc.git package/luci-app-frpc
@@ -18,8 +22,6 @@ git clone -b dev https://github.com/immortalwrt/homeproxy.git package/homrproxy 
 #添加 OpenAppFliter
 #git clone https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter
 # 添加额外插件
-##nikki
-#echo "src-git nikki https://github.com/nikkinikki-org/OpenWrt-nikki.git;main" >> "feeds.conf.default"
 
 #git clone --depth=1 https://github.com/kongfl888/luci-app-adguardhome package/luci-app-adguardhome
 #添加dae支持
@@ -54,5 +56,4 @@ sed -i "s/${orig_version}/R${date_version} by LoogCP/g" package/emortal/default-
 # 修复 hostapd 报错
 #cp -f $GITHUB_WORKSPACE/scripts/011-fix-mbo-modules-build.patch package/network/services/hostapd/patches/011-fix-mbo-modules-build.patch
 
-./scripts/feeds update -a
 ./scripts/feeds install -a -f
