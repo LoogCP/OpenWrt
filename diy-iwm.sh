@@ -56,4 +56,5 @@ sed -i "s/${orig_version}/R${date_version} by LoogCP/g" package/emortal/default-
 # 修复 hostapd 报错
 #cp -f $GITHUB_WORKSPACE/scripts/011-fix-mbo-modules-build.patch package/network/services/hostapd/patches/011-fix-mbo-modules-build.patch
 
+./scripts/feeds update -a
 ./scripts/feeds install -a -f
