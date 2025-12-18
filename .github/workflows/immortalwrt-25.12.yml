@@ -6,13 +6,13 @@ on:
 env:
   REPO_URL: https://github.com/immortalwrt/immortalwrt.git
   REPO_BRANCH: openwrt-25.12
-  CONFIG_FILE: configs/iw-master.config
+  CONFIG_FILE: configs/iw-25.config
   DIY_SCRIPT: diy-iw25.sh
   CLASH_KERNEL: amd64
   CACHE_TOOLCHAIN: true
   UPLOAD_BIN_DIR: false
   FIRMWARE_RELEASE: true
-  FIRMWARE_TAG: ImmortalWrt-master
+  FIRMWARE_TAG: ImmortalWrt-25
   TZ: Asia/Shanghai
 
 jobs:
