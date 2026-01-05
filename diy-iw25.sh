@@ -6,8 +6,8 @@ sed -i 's/192.168.1.1/10.10.1.1/g' package/base-files/files/bin/config_generate
 sed -i 's/\/bin\/ash/\/usr\/bin\/fish/g' package/base-files/files/etc/passwd
 
 #添加Nikki
-echo "src-git nikki https://github.com/nikkinikki-org/OpenWrt-nikki.git;main" >> "feeds.conf.default"
-./scripts/feeds update -a
+#echo "src-git nikki https://github.com/nikkinikki-org/OpenWrt-nikki.git;main" >> "feeds.conf.default"
+#./scripts/feeds update -a
 
 # 修改frpc
 #rm -rf feeds/luci/applications/luci-app-frpc
@@ -20,7 +20,7 @@ rm -rf  feeds/luci/applications/luci-app-homeproxy
 git clone -b dev https://github.com/immortalwrt/homeproxy.git package/homrproxy  #使用immortalwrt/dev分支
 git clone https://github.com/lmq8267/luci-app-caddy.git package/luci-app-caddy
 #git clone https://github.com/fuqiang03/openwrt-caddy.git package/openwrt-caddy
-git clone https://github.com/LoogCP/openwrt-caddy.git package/openwrt-caddy
+git clone https://github.com/LoogCP/openwrt-caddy.git package/caddy-custom
 #添加 OpenAppFliter
 #git clone https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter
 # 添加额外插件
