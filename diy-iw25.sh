@@ -18,7 +18,7 @@ rm -rf  feeds/luci/applications/luci-app-homeproxy
 #git clone https://github.com/muink/luci-app-homeproxy package/homeproxy
 #git clone -b dev/main https://github.com/muink/homeproxy.git package/homrproxy  #使用dev/main分支
 git clone -b dev https://github.com/immortalwrt/homeproxy.git package/homrproxy  #使用immortalwrt/dev分支
-git clone https://github.com/lmq8267/luci-app-caddy.git package/luci-app-caddy
+#git clone https://github.com/lmq8267/luci-app-caddy.git package/luci-app-caddy
 #git clone https://github.com/fuqiang03/openwrt-caddy.git package/openwrt-caddy
 git clone https://github.com/LoogCP/openwrt-caddy.git package/caddy-custom
 #添加 OpenAppFliter
