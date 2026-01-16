@@ -12,20 +12,25 @@ sed -i 's/\/bin\/ash/\/usr\/bin\/fish/g' package/base-files/files/etc/passwd
 # 修改frpc
 #rm -rf feeds/luci/applications/luci-app-frpc
 #git clone https://github.com/yhl452493373/luci-app-frpc.git package/luci-app-frpc
+
 #替换luci-app-dae
-rm -rf  feeds/luci/applications/luci-app-dae
-git clone https://github.com/Pacalini/luci-app-dae package/luci-app-dae
+#rm -rf  feeds/luci/applications/luci-app-dae
+#git clone https://github.com/Pacalini/luci-app-dae package/luci-app-dae
+
 #修改homeproxy
 rm -rf  feeds/luci/applications/luci-app-homeproxy
 git clone https://github.com/VIKINGYFY/homeproxy package/homeproxy
 #git clone -b dev https://github.com/immortalwrt/homeproxy.git package/homrproxy  #使用immortalwrt/dev分支
+
+#Caddy相关
 #git clone https://github.com/lmq8267/luci-app-caddy.git package/luci-app-caddy
 #git clone https://github.com/fuqiang03/openwrt-caddy.git package/openwrt-caddy
-#git clone https://github.com/LoogCP/openwrt-caddy.git package/caddy-custom
+git clone https://github.com/LoogCP/openwrt-caddy.git package/caddy-custom
+
 #添加 OpenAppFliter
 #git clone https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter
-# 添加额外插件
 
+# 添加额外插件
 #git clone --depth=1 https://github.com/kongfl888/luci-app-adguardhome package/luci-app-adguardhome
 #添加dae支持
 #git clone https://github.com/QiuSimons/luci-app-daed package/dae
