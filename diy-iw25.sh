@@ -25,7 +25,7 @@ git clone https://github.com/VIKINGYFY/homeproxy package/homeproxy
 #Caddy相关
 #git clone https://github.com/lmq8267/luci-app-caddy.git package/luci-app-caddy
 #git clone https://github.com/fuqiang03/openwrt-caddy.git package/openwrt-caddy
-git clone https://github.com/LoogCP/openwrt-caddy.git package/caddy-custom
+#git clone https://github.com/LoogCP/openwrt-caddy.git package/caddy-custom
 
 #添加 OpenAppFliter
 #git clone https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter
