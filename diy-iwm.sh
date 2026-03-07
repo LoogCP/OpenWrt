@@ -66,3 +66,12 @@ sed -i "s/${orig_version}/R${date_version} by LoogCP/g" package/emortal/default-
 
 ./scripts/feeds update -a
 ./scripts/feeds install -a -f
+
+mkdir -p ~/.cargo
+cat > ~/.cargo/config.toml << 'EOF'
+[source.crates-io]
+replace-with = "mirror"
+
+[source.mirror]
+registry = "sparse+https://mirrors.bfsu.edu.cn/crates.io-index/"
+EOF
