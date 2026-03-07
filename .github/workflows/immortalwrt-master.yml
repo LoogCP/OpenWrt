@@ -17,7 +17,7 @@ env:
 
 jobs:
   Build:
-    runs-on: debian-11
+    runs-on: ubuntu-latest
 
     steps:
     - name: Check Server Performance
