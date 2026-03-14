@@ -42,6 +42,6 @@ if [ ! -f "$BASE_DIR/etc/caddy/ubus.sh" ]; then
     echo "错误: 下载 ubus.sh 失败"
     exit 1
 fi
-chmod +x "$BASE_DIR/usr/bin/ubus.sh"
+chmod +x "$BASE_DIR/etc/caddy/ubus.sh"
 
 echo "所有文件已成功放置到 $BASE_DIR 下"
