@@ -37,8 +37,8 @@ fi
 chmod +x "$BASE_DIR/etc/init.d/caddy"
 
 # 4. 下载 ubus 脚本
-wget -qO "$BASE_DIR/usr/bin/ubus.sh" "https://raw.githubusercontent.com/LoogCP/caddy/main/ubus.sh"
-if [ ! -f "$BASE_DIR/usr/bin/ubus.sh" ]; then
+wget -qO "$BASE_DIR/etc/caddy/ubus.sh" "https://raw.githubusercontent.com/LoogCP/caddy/main/ubus.sh"
+if [ ! -f "$BASE_DIR/etc/caddy/ubus.sh" ]; then
     echo "错误: 下载 ubus.sh 失败"
     exit 1
 fi
