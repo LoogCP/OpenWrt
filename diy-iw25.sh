@@ -14,8 +14,8 @@ sed -i 's/\/bin\/ash/\/usr\/bin\/fish/g' package/base-files/files/etc/passwd
 #git clone https://github.com/yhl452493373/luci-app-frpc.git package/luci-app-frpc
 
 #替换luci-app-dae
-#rm -rf  feeds/luci/applications/luci-app-dae
-#git clone https://github.com/Pacalini/luci-app-dae package/luci-app-dae
+rm -rf  feeds/luci/applications/luci-app-dae
+git clone https://github.com/Pacalini/luci-app-dae package/luci-app-dae
 
 #修改homeproxy
 rm -rf  feeds/luci/applications/luci-app-homeproxy
