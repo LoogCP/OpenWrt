@@ -9,8 +9,8 @@ env:
   CONFIG_FILE: configs/iw-25.config
   DIY_SCRIPT: diy-iw25.sh
   CLASH_KERNEL: amd64
-  # ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION: true
-  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+  ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION: true
+  #FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
   CACHE_TOOLCHAIN: true
   UPLOAD_BIN_DIR: false
   FIRMWARE_RELEASE: true
@@ -90,13 +90,13 @@ jobs:
           DEVICE_SUBTARGET=$(cat .config | grep CONFIG_TARGET_SUBTARGET | awk -F '"' '{print $2}')
           echo "DEVICE_SUBTARGET=$DEVICE_SUBTARGET" >> $GITHUB_ENV
 
-#      - name: Cache Toolchain
-#        if: env.CACHE_TOOLCHAIN == 'true'
-#        uses: HiGarfield/cachewrtbuild@main
-#        with:
- #         ccache: false
-  #        mixkey: ${{ env.SOURCE_REPO }}-${{ env.REPO_BRANCH }}-${{ env.DEVICE_TARGET }}-${{ env.DEVICE_SUBTARGET }}
-   #       prefix: ${{ env.OPENWRT_PATH }}
+      - name: Cache Toolchain
+        if: env.CACHE_TOOLCHAIN == 'true'
+        uses: HiGarfield/cachewrtbuild@main
+        with:
+          ccache: false
+          mixkey: ${{ env.SOURCE_REPO }}-${{ env.REPO_BRANCH }}-${{ env.DEVICE_TARGET }}-${{ env.DEVICE_SUBTARGET }}
+          prefix: ${{ env.OPENWRT_PATH }}
 
       - name: Install Feeds
         run: |
