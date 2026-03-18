@@ -6,8 +6,10 @@ uci commit luci
 # 禁用 uhttpd 服务
 # 停止服务（如果正在运行）
 /etc/init.d/uhttpd stop 2>/dev/null
+/etc/init.d/nginx stop 2>/dev/null
 # 关闭开机自启
 /etc/init.d/uhttpd disable
+/etc/init.d/nginx disable
 
 # 通过 UCI 禁用 uhttpd（可选，确保配置不冲突）
 # 将 uhttpd 主实例的监听端口改为非标准或直接禁用
