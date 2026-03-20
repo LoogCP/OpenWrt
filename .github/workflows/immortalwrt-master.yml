@@ -42,6 +42,8 @@ jobs:
         run: |
           sudo rm -rf /usr/share/dotnet /etc/apt/sources.list.d /usr/local/lib/android $AGENT_TOOLSDIRECTORY
           sudo -E apt-get -y purge azure-cli ghc* zulu* llvm* firefox google* dotnet* powershell openjdk* mongodb* moby* || true
+          sudo -E docker system prune -a -f   
+          sudo journalctl --vacuum-size=200M
           sudo -E apt-get -y update
           sudo bash -c 'bash <(curl -s https://build-scripts.immortalwrt.org/init_build_environment.sh)'
           #sudo -E apt-get -y install clang lld libpcre3 libpcre3-dev clang-15 llvm-15 npm
