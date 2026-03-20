@@ -9,18 +9,14 @@ sed -i 's/\/bin\/ash/\/usr\/bin\/fish/g' package/base-files/files/etc/passwd
 #echo "src-git nikki https://github.com/nikkinikki-org/OpenWrt-nikki.git;main" >> "feeds.conf.default"
 #./scripts/feeds update -a
 
-# 修改frpc
-#rm -rf feeds/luci/applications/luci-app-frpc
-#git clone https://github.com/yhl452493373/luci-app-frpc.git package/luci-app-frpc
 
 #替换luci-app-dae
-rm -rf  feeds/luci/applications/luci-app-dae
-git clone https://github.com/Pacalini/luci-app-dae package/luci-app-dae
-
+# rm -rf  feeds/luci/applications/luci-app-dae
+# git clone https://github.com/Pacalini/luci-app-dae package/luci-app-dae
+#
 #修改homeproxy
 rm -rf  feeds/luci/applications/luci-app-homeproxy
-git clone https://github.com/VIKINGYFY/homeproxy package/homeproxy
-#git clone -b dev https://github.com/immortalwrt/homeproxy.git package/homrproxy  #使用immortalwrt/dev分支
+git clone -b dev https://github.com/immortalwrt/homeproxy.git package/homrproxy  #使用immortalwrt/dev分支
 
 
 #添加 OpenAppFliter
