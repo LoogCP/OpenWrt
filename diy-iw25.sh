@@ -18,6 +18,8 @@ sed -i 's/\/bin\/ash/\/usr\/bin\/fish/g' package/base-files/files/etc/passwd
 rm -rf  feeds/luci/applications/luci-app-homeproxy
 git clone -b dev https://github.com/immortalwrt/homeproxy.git package/homrproxy  #使用immortalwrt/dev分支
 
+# 添加luci-app-easytier
+git clone https://github.com/EasyTier/luci-app-easytier.git package/luci-app-easytier
 
 #添加 OpenAppFliter
 #git clone https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter
