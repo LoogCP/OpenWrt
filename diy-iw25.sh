@@ -25,7 +25,7 @@ git clone https://github.com/EasyTier/luci-app-easytier.git package/luci-app-eas
 #git clone https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter
 
 # 添加额外插件
-#git clone --depth=1 https://github.com/kongfl888/luci-app-adguardhome package/luci-app-adguardhome
+git clone --depth=1 https://github.com/kongfl888/luci-app-adguardhome package/luci-app-adguardhome
 #添加dae支持
 #git clone https://github.com/QiuSimons/luci-app-daed package/dae
 #mkdir -p Package/libcron && wget -O Package/libcron/Makefile https://raw.githubusercontent.com/immortalwrt/packages/refs/heads/master/libs/libcron/Makefile
