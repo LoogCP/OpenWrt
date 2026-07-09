@@ -5,14 +5,10 @@ sed -i 's/192.168.1.1/10.10.1.1/g' package/base-files/files/bin/config_generate
 # 更改默认 Shell 为 fish
 sed -i 's/\/bin\/ash/\/usr\/bin\/fish/g' package/base-files/files/etc/passwd
 
-#添加Nikki
-#echo "src-git nikki https://github.com/nikkinikki-org/OpenWrt-nikki.git;main" >> "feeds.conf.default"
-#./scripts/feeds update -a
-
 
 #替换luci-app-dae
-# rm -rf  feeds/luci/applications/luci-app-dae
-# git clone https://github.com/Pacalini/luci-app-dae package/luci-app-dae
+rm -rf  feeds/luci/applications/luci-app-dae
+git clone https://github.com/Pacalini/luci-app-dae package/luci-app-dae
 #
 #修改homeproxy
 rm -rf  feeds/luci/applications/luci-app-homeproxy
@@ -21,14 +17,8 @@ git clone -b dev https://github.com/immortalwrt/homeproxy.git package/homrproxy 
 # 添加luci-app-easytier
 git clone https://github.com/EasyTier/luci-app-easytier.git package/luci-app-easytier
 
-#添加 OpenAppFliter
-#git clone https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter
 
 # 添加额外插件
-git clone --depth=1 https://github.com/kongfl888/luci-app-adguardhome package/luci-app-adguardhome
-#添加dae支持
-#git clone https://github.com/QiuSimons/luci-app-daed package/dae
-#mkdir -p Package/libcron && wget -O Package/libcron/Makefile https://raw.githubusercontent.com/immortalwrt/packages/refs/heads/master/libs/libcron/Makefile
 
 #添加pushbot
 git clone https://github.com/gaoyaxuan/luci-app-pushbot.git package/luci-app-pushbot
