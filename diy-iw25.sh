@@ -8,6 +8,9 @@ sed -i 's/\/bin\/ash/\/usr\/bin\/fish/g' package/base-files/files/etc/passwd
 
 #替换luci-app-dae
 rm -rf  feeds/luci/applications/luci-app-dae
+rm -rf  feeds/luci/applications/luci-app-daed
+rm -rf  feeds/packages/net/dae
+rm -rf  feeds/packages/net/daed
 git clone https://github.com/Pacalini/luci-app-dae package/luci-app-dae
 #
 #修改homeproxy
