@@ -1,4 +1,7 @@
 #!/bin/bash
+
+./scripts/feeds update -a
+
 # 修改默认IP
 sed -i 's/192.168.1.1/10.10.1.1/g' package/base-files/files/bin/config_generate
 
@@ -41,5 +44,7 @@ orig_version=$(cat "package/emortal/default-settings/files/99-default-settings" 
 sed -i "s/${orig_version}/R${date_version} by LoogCP/g" package/emortal/default-settings/files/99-default-settings
 
 
-./scripts/feeds update -a
 ./scripts/feeds install -a -f
+./scripts/feeds install -f -p luci-app-dae
+./scripts/feeds install -f -p luci-app-homeproxy
+
