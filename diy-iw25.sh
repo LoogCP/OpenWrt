@@ -1,6 +1,7 @@
 #!/bin/bash
 
-./scripts/feeds update -a
+#添加small源
+sed -i '1i src-git small https://github.com/kenzok8/small' feeds.conf.default
 
 # 修改默认IP
 sed -i 's/192.168.1.1/10.10.1.1/g' package/base-files/files/bin/config_generate
@@ -8,26 +9,6 @@ sed -i 's/192.168.1.1/10.10.1.1/g' package/base-files/files/bin/config_generate
 # 更改默认 Shell 为 fish
 sed -i 's/\/bin\/ash/\/usr\/bin\/fish/g' package/base-files/files/etc/passwd
 
-
-#替换luci-app-dae
-rm -rf  feeds/luci/applications/luci-app-dae
-rm -rf  feeds/luci/applications/luci-app-daed
-rm -rf  feeds/packages/net/dae
-rm -rf  feeds/packages/net/daed
-git clone https://github.com/Pacalini/luci-app-dae package/luci-app-dae
-#
-#修改homeproxy
-rm -rf  feeds/luci/applications/luci-app-homeproxy
-git clone -b dev https://github.com/immortalwrt/homeproxy.git package/homrproxy  #使用immortalwrt/dev分支
-
-# 添加luci-app-easytier
-git clone https://github.com/EasyTier/luci-app-easytier.git package/luci-app-easytier
-
-
-# 添加额外插件
-
-#添加pushbot
-git clone https://github.com/gaoyaxuan/luci-app-pushbot.git package/luci-app-pushbot
 
 # Themes
 git clone --depth=1 -b master https://github.com/kiddin9/luci-theme-edge package/luci-theme-edge
@@ -44,7 +25,7 @@ orig_version=$(cat "package/emortal/default-settings/files/99-default-settings" 
 sed -i "s/${orig_version}/R${date_version} by LoogCP/g" package/emortal/default-settings/files/99-default-settings
 
 
-./scripts/feeds install -a -f
-./scripts/feeds install -f -p luci-app-dae
-./scripts/feeds install -f -p luci-app-homeproxy
+./scripts/feeds update -a
+./scripts/feeds install -a
+./scripts/feeds install  -f -a -p small
 
